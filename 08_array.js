@@ -52,7 +52,7 @@ const newArr = myArr.join()  // it join the array by what is given in ()
 // console.log( newArr);
 
 
-//++++++++++++++++++++++++++++++++++++++++  slice, splice   +++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++  slice, splice   ++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 console.log("A ", myArr);
 const myn1 = myArr.slice(1, 3)   //it give the section of array  in which 1 is included and 3 is excluded
@@ -79,22 +79,23 @@ console.log(marvel_heros[3][1]);   //printing element from nested array
 const allHeros = marvel_heros.concat(dc_heros)  //now this will work properly give new complete array
 console.log(allHeros);
 const all_new_heros = [...marvel_heros, ...dc_heros]  //spread oparator  work same as concat.
+console.log(all_new_heros);
 
-// console.log(all_new_heros);
+
+
 
 const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
-
-const real_another_array = another_array.flat(Infinity)
-console.log(real_another_array);
-
+const real_another_array = another_array.flat(Infinity)   //this will make single array from these nested 
+console.log(real_another_array);  //return all element in single array without nesting...
 
 
-console.log(Array.isArray("Hitesh"))
-console.log(Array.from("Hitesh"))
+console.log(Array.isArray("Hitesh"))   // Is this a array . just a question
+console.log(Array.from("Hitesh"))      // convert string into array  with char as element  [ 'H', 'i', 't', 'e', 's', 'h' ]
 console.log(Array.from({name: "hitesh"})) // interesting
+
+
 
 let score1 = 100
 let score2 = 200
 let score3 = 300
-
-console.log(Array.of(score1, score2, score3));
+console.log(Array.of(score1, score2, score3));  //return array from set of element.. which is provided under ()
