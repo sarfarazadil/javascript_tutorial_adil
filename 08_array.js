@@ -78,7 +78,7 @@ console.log(marvel_heros[3][1]);   //printing element from nested array
 
 const allHeros = marvel_heros.concat(dc_heros)  //now this will work properly give new complete array
 console.log(allHeros);
-const all_new_heros = [...marvel_heros, ...dc_heros]  //spread oparator  work same as concat
+const all_new_heros = [...marvel_heros, ...dc_heros]  //spread oparator  work same as concat.
 
 // console.log(all_new_heros);
 
