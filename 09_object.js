@@ -77,29 +77,30 @@ const obj4 = {5: "a", 6: "b"}
 // console.log(obj3);                  here printing the mearge object
 
 
-const users = [
+const users = [             //  arraay of object 
     {
         id: 1,
-        email: "h@gmail.com"
+        email: "a@gmail.com"
     },
     {
         id: 1,
-        email: "h@gmail.com"
+        email: "b@gmail.com"
     },
     {
         id: 1,
-        email: "h@gmail.com"
+        email: "c@gmail.com"
     },
 ]
 
-users[1].email
-// console.log(tinderUser);
+users[1].email           // o/p is a@gmail.com
 
-// console.log(Object.keys(tinderUser));
-// console.log(Object.values(tinderUser));
-// console.log(Object.entries(tinderUser));
 
-// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+console.log(tinderUser);
+console.log(Object.keys(tinderUser));          // this wil return array of  keys 
+console.log(Object.values(tinderUser));        // this will return array of value
+console.log(Object.entries(tinderUser));       //  array of keys and values  inside another array 
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));     // is any property present "isloggedIn"
 
 
 const course = {
@@ -108,12 +109,21 @@ const course = {
     courseInstructor: "hitesh"
 }
 
-// course.courseInstructor
+course.courseInstructor                            // normal way of access the key of object
+const {courseInstructor} = course                  // destructuring of object
+console.log(courseInstructor);                     // we can log just by courseInstructor
 
-const {courseInstructor: instructor} = course
+const {courseInstructor: instructor} = course      // destructuring of object
+console.log(instructor);                           //we can log just by Instructor
 
-// console.log(courseInstructor);
-console.log(instructor);
+
+
+
+
+//  both are the formate if API
+//  https://randomuser.me/api/  go to this website and copy the api and put in the https://jsonformatter.org/
+//  convert to code  or tree oe form
+
 
 // {
 //     "name": "hitesh",
