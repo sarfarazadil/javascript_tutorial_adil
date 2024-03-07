@@ -1,4 +1,4 @@
-// lets start learning if else with me    "Adil"
+// lets start learning javascript with me    "Adil"
 
 
 //   javasript exicution context
@@ -9,24 +9,23 @@
 //   3 eval exicution context
 
 
-//+++++++++++++++++++       look "image_1"    for here
+//++++++++  look "image_1"    for here
 
-//++++++++++++++++++++++++++++++++++++++++++++   controll flow +++++++++++++++++++++++++++++++++++++
+
+//++++++++++++++++++++++++++++++++++++++++++++   controll flow   if else  ++++++++++++++++++++++++++++++++++++
 
 const isUserloggedIn = true
 const temperature = 41
-
-// if ( temperature === 40 ){
-//     console.log("less than 50");
-// } else {
-//     console.log("temperature is greater than 50");
-// }
+if ( temperature === 40 ){   
+    console.log("less than 50");
+} else {
+    console.log("temperature is greater than 50");
+}
 
 // console.log("Execute");
-// <, >, <=, >=, ==, !=, ===, !==
+// <, >, <=, >=, ==, !=, ===, !==                     ===  check type also  (2==="2") => false
 
 // const score = 200
-
 // if (score > 100) {
 //     let power = "fly"
 //     console.log(`User power: ${power}`);
@@ -66,32 +65,6 @@ if (loggedInFromGoogle || loggedInFromEmail) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // switch (key) {
 //     case value:
         
@@ -122,20 +95,7 @@ switch (month) {
         break;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//+++++++++++++++++++++++++++++++++++++++  truthy  and falsy   ++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 
 
@@ -148,11 +108,11 @@ if (userEmail) {
 }
 
 // falsy values
-
 // false, 0, -0, BigInt 0n, "", null, undefined, NaN
 
 //truthy values
 // "0", 'false', " ", [], {}, function(){}
+
 
 // if (userEmail.length === 0) {
 //     console.log("Array is empty");
@@ -167,10 +127,10 @@ if (Object.keys(emptyObj).length === 0) {
 // Nullish Coalescing Operator (??): null undefined
 
 let val1;
-// val1 = 5 ?? 10
+val1 = 5 ?? 10                // here if first response is null  then push 2nd response ..
 // val1 = null ?? 10
 // val1 = undefined ?? 15
-val1 = null ?? 10 ?? 20
+val1 = null ?? 10 ?? 20       // here if 2nd response is also null  then push 3rd response .
 
 
 
@@ -182,6 +142,15 @@ console.log(val1);
 
 const iceTeaPrice = 100
 iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80")
+
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++   LOOP   ++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
 
 
 
