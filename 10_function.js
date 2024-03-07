@@ -133,59 +133,56 @@ const addTwo = function(num){          // expression that hold fxn
 
 
 
-//+++++++++++++++++++++++++++++++++++++++  this and arrow ++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+//+++++++++++++++++++++++++++++++++++++++  this and arrow  ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// introduce in ES6
 
 const user = {
     username: "hitesh",
     price: 999,
 
     welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`);
-        console.log(this);
+        console.log(`${this.username} , welcome to website`);  // here this refer to the same context
+        console.log(this);                                     // this will give object of same context
     }
 
 }
 
-// user.welcomeMessage()
-// user.username = "sam"
-// user.welcomeMessage()
+user.welcomeMessage()                   // hitesh welcome to website
+user.username = "sam"                   // here sam overwrite hitesh
+user.welcomeMessage()                   // sam welcome to website
 
-// console.log(this);
+console.log(this);                      // this will give = empty {}   but in case of browser = {window.......}
 
-// function chai(){
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
 
-// chai()
-
-// const chai = function () {
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
-
-const chai =  () => {
+//+++++ arrow
+ 
+function chai(){
     let username = "hitesh"
-    console.log(this);
+    console.log(this);                       //give huge output in node Envioment
+}
+chai()
+
+const chai = function () {
+    let username = "hitesh"
+    console.log(this.username);                 //undefine in, this.username inside the function
 }
 
 
-// chai()
+const chai =  () => {                        // remove function and put => after ()
+    let username = "hitesh"
+    console.log(this);                       // give  empty {}
+}
+chai()
 
-// const addTwo = (num1, num2) => {
-//     return num1 + num2
-// }
+const addTwo1 = (num1, num2) => {  return num1 + num2 }    //1st way of defining arrow fxn   "explicitly"
+   
+const addTwo2 = (num1, num2) =>  num1 + num2           // 2nd way of defining arrow fxn      "implicitly"
 
-// const addTwo = (num1, num2) =>  num1 + num2
+const addTwo3 = (num1, num2) => ( num1 + num2 )        //  3rd  way of defining arrow fxn     "implicitly"
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
-
-// const addTwo = (num1, num2) => ({username: "hitesh"})
-
+const addTwo4 = (num1, num2) => ({username: "hitesh"})   //   object return  
 
 console.log(addTwo(3, 4))
-
 
 // const myArray = [2, 5, 3, 7, 8]
 
@@ -196,21 +193,15 @@ console.log(addTwo(3, 4))
 
 
 
+//+++++++++++++++++++++++ Immediately Invoked Function Expressions (IIFE)  +++++++++++++++++++++++++++++
+// to remove global scope problem we use iife
 
-
-
-
-
-
-// Immediately Invoked Function Expressions (IIFE)
-
-
-(function chai(){
+(function chai1(){                    // just wrap the function with ()  and then put () after that  
     // named IIFE
     console.log(`DB CONNECTED`);
 })();
-
+                                         // if faace error put semicolon
 ( (name) => {
     console.log(`DB CONNECTED TWO ${name}`);
-} )('hitesh')
+} )('hitesh');
 
