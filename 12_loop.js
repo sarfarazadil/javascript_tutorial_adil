@@ -78,8 +78,6 @@ do {
 
 
 
-
-
 // for of
 
 // ["", "", ""]
@@ -96,7 +94,9 @@ for (const greet of greetings) {
     //console.log(`Each char is ${greet}`)
 }
 
-// Maps
+
+//++++++++++++++++++++++++++++++++++++++    Maps    ++++++++++++++++++++++++++++++++++++++++++++
+
 
 const map = new Map()
 map.set('IN', "India")
@@ -105,29 +105,21 @@ map.set('Fr', "France")
 map.set('IN', "India")
 
 
-// console.log(map);
+console.log(map);                         //  print only three key and value  "IN" will not repeated 
 
-for (const [key, value] of map) {
+for (const [key, value] of map) {         // this is how apply loop on map    for of loop
     // console.log(key, ':-', value);
 }
 
-const myObject = {
+const myObject1 = {
     game1: 'NFS',
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
-//     console.log(key, ':-', value);
+for (const [key, value] of myObject) {            //  well, this is not working over object     for of loop
+    console.log(key, ':-', value);
     
-// }
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -141,55 +133,53 @@ const myObject = {
     swift: "swift by apple"
 }
 
-for (const key in myObject) {
-    //console.log(`${key} shortcut is for ${myObject[key]}`);
+for (const key in myObject) {                           // use "for in loop"  for ittrating in object object 
+    console.log(`${key} shortcut is for ${myObject[key]}`);
 }
 
-const programming = ["js", "rb", "py", "java", "cpp"]
 
-for (const key in programming) {
-    //console.log(programming[key]);
+const programming = ["js", "rb", "py", "java", "cpp"]     
+for (const key in programming) {                        // for in loop  use in array
+    console.log(programming[key]);
 }
 
-// const map = new Map()
-// map.set('IN', "India")
-// map.set('USA', "United States of America")
-// map.set('Fr', "France")
-// map.set('IN', "India")
-
-// for (const key in map) {
-//     console.log(key);
-// }
 
 
 
 
+const map1 = new Map()
+map.set('IN', "India")
+map.set('USA', "United States of America")
+map.set('Fr', "France")
+map.set('IN', "India")
 
-
-
+for (const key in map1) {                                 // for in loop not use in map
+    console.log(key);
+}
 
 
 
 const coding = ["js", "ruby", "java", "python", "cpp"]
+                                                            // for each fxn
+coding.forEach( function (val){                             //callback fxn ka naam nahi hota hai
+    console.log(val);                                      // give parameter
+} )
+ 
+coding.forEach( (item) => {                                 // we can use arrow fxn
+    console.log(item);
+} )
 
-// coding.forEach( function (val){
-//     console.log(val);
-// } )
+function printMe(item){
+    console.log(item);
+}
+coding.forEach(printMe)                                  // we can also pass reference of any fxn NOT GIVE "()"
 
-// coding.forEach( (item) => {
-//     console.log(item);
-// } )
+coding.forEach( (item, index, arr)=> {                   // it carry item index as well as whole array
+    console.log(item, index, arr);                 
+} )
 
-// function printMe(item){
-//     console.log(item);
-// }
 
-// coding.forEach(printMe)
-
-// coding.forEach( (item, index, arr)=> {
-//     console.log(item, index, arr);
-// } )
-
+                                                        // object inside array
 const myCoding = [
     {
         languageName: "javascript",
@@ -205,18 +195,14 @@ const myCoding = [
     },
 ]
 
-myCoding.forEach( (item) => {
+myCoding.forEach( (item) => {           
     
-    console.log(item.languageName);
+    console.log(item.languageName);                    // here each item is an object thatswhy  item.languageName
 } )
 
 
 
-
-
-
-
-
+//++++++++++++++++++++++++++++++++++++++   filter MAP reduce +++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
