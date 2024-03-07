@@ -200,8 +200,28 @@ console.log(addTwo(3, 4))
     // named IIFE
     console.log(`DB CONNECTED`);
 })();
-                                         // if faace error put semicolon
-( (name) => {
+                                         //  when write two iife we will face error just put semicolon
+( (name) => {                            // can take parameter
     console.log(`DB CONNECTED TWO ${name}`);
-} )('hitesh');
+} )('hitesh');                            // passing argument.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
