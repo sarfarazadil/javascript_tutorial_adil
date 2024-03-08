@@ -233,7 +233,7 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // } )
 
 // console.log(newNums);
-
+//+++++++++++++++++++++++++++++++++++++++++++   question    +++++++++++++++++++++++++++++++++++++++++++++++
 
 const books = [
     { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
@@ -247,17 +247,12 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-  let userBooks = books.filter( (bk) => bk.genre === 'History')
+  let userBooks = books.filter( (bk) => bk.genre === 'History')    //those book which have genre as histry
 
   userBooks = books.filter( (bk) => { 
-    return bk.publish >= 1995 && bk.genre === "History"
+    return bk.publish >= 1995 && bk.genre === "History"        //which have genre histry and publish 1995
 })
   console.log(userBooks);
-
-
-
-
-
 
 
 
@@ -265,36 +260,25 @@ const books = [
 
   // const newNums = myNumers.map( (num) => { return num + 10})
   
-  const newNums = myNumers
+  const newNums = myNumers                             // 2nd map work on the result of first map
                   .map((num) => num * 10 )
                   .map( (num) => num + 1)
                   .filter( (num) => num >= 40)
   
   console.log(newNums);
 
+  //++++++++++++++++++++++++++++++   reuduse   ++++++++++++++++++++++++++++++++++++++++++++ lec 30
 
+  const myNums1 = [1, 2, 3]
 
+const myTotal = myNums1.reduce(function (acc, currval) {
+    console.log(`acc: ${acc} and currval: ${currval}`);
+    return acc + currval
+}, 0)
 
+const myTotal1 = myNums1.reduce( (acc, curr) => acc+curr, 0)
 
-
-
-
-
-
-
-
-
-
-  const myNums = [1, 2, 3]
-
-// const myTotal = myNums.reduce(function (acc, currval) {
-//     console.log(`acc: ${acc} and currval: ${currval}`);
-//     return acc + currval
-// }, 0)
-
-const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
-
-console.log(myTotal);
+console.log(myTotal1);
 
 
 const shoppingCart = [
